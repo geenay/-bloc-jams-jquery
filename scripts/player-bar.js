@@ -7,7 +7,7 @@ $('#time-control .total-time').text( totalTime );
 
 const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
 const nextSongIndex = currentSongIndex - 1;
-  if (currentSongIndex >= album.songs.length) { return; }
+  if (nextSongIndex >= album.songs.length) { return; }
 
          const nextSong = album.songs[nextSongIndex];
          player.playPause(nextSong);
@@ -23,7 +23,7 @@ if (nextSongIndex >= album.songs.length) { return; }
 
          const nextSong = album.songs[nextSongIndex];
          player.playPause(nextSong);
-         $('#time-control .total-time').text( player.prettyTime(newSong.duration));
+
 
   });
 
